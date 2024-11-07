@@ -1,52 +1,50 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-int main(){
-    unsigned long long n,m,i,j,k=0,x=4;
+using ull = unsigned long long;
 
-    cin>>n >> m;
+int main() {
+    int n, ordem, numeroMatriz = 4;
+    cin >> n; // número de matrizes
 
-    long a[m][m];
+    for (int k = 0; k < n; k++) {
+        cin >> ordem;
+        vector<vector<ull>> matriz(ordem, vector<ull>(ordem));
 
-    while(k<n){
-        i=0;
-        while(i<m){
-            j=0;
-            while(j<m){
-                cin>> a[i][j];
-                a[i][j] = a[i][j]*a[i][j];
-                j++;
+        // ler matriz e calcular quadrados
+        for (int i = 0; i < ordem; i++) {
+            for (int j = 0; j < ordem; j++) {
+                cin >> matriz[i][j];
+                matriz[i][j] *= matriz[i][j]; // multiplicando por ele mesmo
             }
-            i++;
         }
-        cout<< "Quadrado da matriz #"<<x<< ":"<< endl;
-        i=0;
-        while(i<m){
-            j=0;
-            while(j<m){
-                unsigned long long maior =0;
-                int w=0;
-                while(w<m){
-                    if(maior<a[w][j]){
-                        maior = a[w][j];
 
+        // saída da matriz de quadrados
+        cout << "Quadrado da matriz #" << numeroMatriz << ":\n";
+        for (int i = 0; i < ordem; i++) {
+            for (int j = 0; j < ordem; j++) {
+                // descobrindo o maior número na coluna
+                ull maior = 0;
+                for (int w = 0; w < ordem; w++) {
+                    if (maior < matriz[w][j]) {
+                        maior = matriz[w][j];
                     }
-                    w++;
                 }
+
+                // calcular a quantidade de dígitos do maior número
                 int len = to_string(maior).length();
-                cout<<(j == 0 ? "" : " ")<<setw(len)<<a[i][j];
-                j++;
+
+                // printando o elemento
+                cout << (j == 0 ? "" : " ") << setw(len) << matriz[i][j];
             }
-            i++;
-            cout<<endl;
+            cout << "\n";
         }
-        if(k+1 != n){
-                cout<<endl;
-            }
-        x++;
-        k++;
+
+        if (k + 1 != n) {
+            cout << "\n";
+        }
+        numeroMatriz++;
     }
     return 0;
-
 }
