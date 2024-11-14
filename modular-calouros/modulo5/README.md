@@ -8,7 +8,7 @@
 
     - Exemplo de uso do `for` para iterar sobre um conjunto de valores:
         ```cpp
-        #include <iostream>
+        #include <bits/stdc++.h>
         using namespace std;
         
         int main() {
@@ -22,7 +22,7 @@
 
 - Exemplo de uso do `while` para somar valores até que o número digitado seja zero:
     ```cpp
-    #include <iostream>
+    #include <bits/stdc++.h>
     using namespace std;
     
     int main() {
@@ -47,7 +47,7 @@
 
 - Exemplo de uma função recursiva que calcula o fatorial de um número:
     ```cpp
-    #include <iostream>
+    #include <bits/stdc++.h>
     using namespace std;
     
     int fatorial(int n) {
@@ -65,7 +65,7 @@
 
 - Exemplo de uma função recursiva para calcular o n-ésimo número de Fibonacci:
     ```cpp
-    #include <iostream>
+    #include <bits/stdc++.h>
     using namespace std;
     
     int fibonacci(int n) {
