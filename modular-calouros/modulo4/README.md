@@ -18,9 +18,9 @@
         
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                std::cout << matriz[i][j] << " ";
+                cout << matriz[i][j] << " ";
             }
-            std::cout << std::endl;
+            cout << endl;
         }
         
         return 0;
@@ -36,7 +36,7 @@
         
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                std::cin >> matriz[i][j];
+                cin >> matriz[i][j];
             }
         }
         ```
@@ -57,9 +57,9 @@
         
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                std::cout << soma[i][j] << " ";
+                cout << soma[i][j] << " ";
             }
-            std::cout << std::endl;
+            cout << endl;
         }
         ```
     - Neste código, `matriz1` e `matriz2` são somadas elemento a elemento, e o resultado é armazenado na matriz `soma`.
