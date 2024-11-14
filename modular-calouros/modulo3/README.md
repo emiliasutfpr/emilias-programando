@@ -1,4 +1,4 @@
-### Módulo 2 da Oficina de Programação Competitiva para Calouros
+### Módulo 3 da Oficina de Programação Competitiva para Calouros
 #### Tópicos Estudados
 - String
 - Vetor
